@@ -7,6 +7,7 @@ const forecast = require('../src/utils/forecastCode');
 const hbs = require('hbs');
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 3000;
 
 //set paths
 const staticPath = path.join(__dirname,"../public");
@@ -83,6 +84,6 @@ app.get('*', (req,res) => {
 });
 
 //start the server
-app.listen(3000,() => {
+app.listen(port,() => {
     console.log("Application is running on port 3000");
 })
