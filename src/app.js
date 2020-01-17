@@ -24,8 +24,8 @@ hbs.registerPartials(partialsPath);
 app.get('', (req,res) => {
     res.render('index', {
         title: 'Weather',
-        desc: 'Weather Page',
-        created: 'Nischal Newar'
+        desc: 'Please enter a location',
+        created: 'copyright@Nischal Newar'
     });
 });
 
@@ -33,17 +33,17 @@ app.get('', (req,res) => {
 app.get('/about', (req,res) => {
     res.render('about', {
         title: 'About',
-        desc: 'About Page',
-        created: 'Nischal Newar'
+        desc: 'Demo Weather Application to get the Weather Information',
+        created: 'copyright@Nischal Newar'
     });
 })
 
 //help page
 app.get('/help',(req,res) => {
     res.render('help', {
-        title: 'Help Page!!',
-        desc: 'Help Page',
-        created: 'Nischal Newar'
+        title: 'Help Page',
+        desc: 'You could go to the homepage and check the weather of a location',
+        created: 'copyright@Nischal Newar'
     });
 })
 //help page error
