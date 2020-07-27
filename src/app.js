@@ -1,6 +1,5 @@
 //core modules
 const path = require('path');
-const geoCode= require('../src/utils/geocode');
 const forecast = require('../src/utils/forecastCode');
 
 //npm modules
@@ -24,7 +23,7 @@ hbs.registerPartials(partialsPath);
 app.get('', (req,res) => {
     res.render('index', {
         title: 'Weather',
-        desc: 'Please enter a location',
+        desc: 'Demo Weather Application',
         created: 'copyright@Nischal Newar'
     });
 });
@@ -33,21 +32,13 @@ app.get('', (req,res) => {
 app.get('/about', (req,res) => {
     res.render('about', {
         title: 'About',
-        desc: 'Demo Weather Application to get the Weather Information',
+        desc: 'Demo Weather Application',
         created: 'copyright@Nischal Newar'
     });
 })
 
-//help page
-app.get('/help',(req,res) => {
-    res.render('help', {
-        title: 'Help Page',
-        desc: 'You could go to the homepage and check the weather of a location',
-        created: 'copyright@Nischal Newar'
-    });
-})
 //help page error
-app.get('/help/*',(req,res) => {
+app.get('about/*',(req,res) => {
     res.render('404',{
         errorMessage: 'Help Content Not Found'
     });
@@ -60,19 +51,17 @@ app.get('/weather', (req,res) => {
             error: "Please provide a valid address"
         });
     }
-    geoCode(req.query.address, (error,{latitude, longitude, location} = {}) => {
-        if(error){
-            return res.send({error: error});
-        }
-        forecast(latitude,longitude,(error,{temperature,rain,forecast} = {}) => {
+    forecast(req.query.address,(error,{temperature,humidity,forecast,country,icon} = {}) => {
             if(error){
                 return res.send({error: error});
             }
             res.send({
-                location: location,
-                forecast: `Daily forecast - ${forecast} Current Temperature - ${temperature} with ${rain} chance to rain.`
+                location: `${req.query.address}, ${country}`,
+                temperature: `${temperature}`,
+                forecast: `${forecast}`,
+                humidity: `${humidity}`,
+                icon: `${icon}`
             });
-        })
     })
 });
 
@@ -85,5 +74,4 @@ app.get('*', (req,res) => {
 
 //start the server
 app.listen(port,() => {
-    console.log("Application is running on port 3000");
 })

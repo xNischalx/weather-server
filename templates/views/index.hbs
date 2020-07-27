@@ -2,20 +2,30 @@
 <html>
     <head>
         <link rel="stylesheet" href="/css/style.css">
+        <title>Weather-Application</title>
     </head>
     <body>
         {{>header}}
-        {{desc}}
-        <form>
-            <input placeholder="Location">
-            <button>Search</button>
-        </form>
-
-        <p id="message1"></p>
-        <p id="message2"></p>
+        <div class="wrapper">
+            <form class="search_box">
+                <input type="text"  placeholder="Search....">
+            </form>
+        </div>
+        <div class="app-container">
+            <section class="app-country">
+                <p class="country">New Delhi, IN</p>
+                <div class="app-icon"><img src="/img/icon/01d.png"></div>
+            </section>
+            <div class="app-weather">
+                <p class="temperature">- <span>ºC</span></p>
+                <p class="forecast">-</p>
+                <p class="humidity"><span>Humidity: </span>-<span>%</span></p>
+            </div>
+        </div>
+        <div class="footer">
+            {{>footer}}
+            <script src="/js/searchweather.js"></script>
+            <script src="/js/date.js"></script>
+        </div>
     </body>
-    <footer>
-        {{>footer}}
-        <script src="/js/script.js"></script>
-    </footer>
 </html>

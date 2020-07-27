@@ -1,41 +1,115 @@
 body {
-    background-color: cornsilk;
-    font-family: arial;
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 0 16px;
+    margin: 0;
+    font-family: 'montserrat', Helvetica, sans-serif;
+    height: 100vh;
+    background-image: url("/img/rain.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+/*Menu-Bar*/
+.topnav {
+    overflow: hidden;
+    background-color: #0F2B3A;
+}
+  
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+  
+.topnav a.active {
+    background-color:#2490B8;
+    color: white;
+}
+
+/*Head*/
+.head h1,h3{
+      color: #E8E8E8;
+      text-align: center;
+}
+
+ /*Search-Bar*/
+.wrapper{
+    width: 100%;
+    height: 10vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.search_box{
+    width: 60%;
+    position: relative;
+}
+  
+.search_box input[type="text"]{
+    width: 100%;
+    padding: 20px;
+    padding-right: 60px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.3);
+    border: 2px solid #E8E8E8;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #E8E8E8;
+    outline: none;
+}
+
+/*Search Results*/
+.app-container{
+    flex: 1 1 100%;
+    padding: 25px 25px 50px;
     display: flex;
     flex-direction: column;
-    min-height: 100vh
+    align-items: center;
+    text-align: center;
 }
 
-.main-content {
-    flex-grow: 1;
+.app-country .country{
+    color: #E8E8E8;
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 5px;
 }
 
-footer {
-    color: #888888;
-    margin-top: 30%;
-    padding: 16px 0;
+.app-weather .temperature {
+    color: #E8E8E8;
+    font-size: 102px;
+    font-weight: 900;
+    margin: 30px 0px;
+    text-shadow: 2px 10px rgba(0, 0, 0, 0.6);
+  }
+  
+.app-weather .temperature,.humidity span {
+    font-weight: 500;
+}
+  
+.app-weather .forecast,.humidity {
+    color: #E8E8E8;
+    font-size: 32px;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 15px;
 }
 
-header {
-    margin-top: 16px;
-    margin-bottom: 48px;
-}
-
-h1 {
-    font-size: 64px;
-    margin-bottom: 16px;
-}
-
-header a {
-    color: #888888;
-    margin-right: 16px;
-    text-decoration: none;
-}
-
-.portrait {
-    width: 250px;
+/*Footer*/
+.footer{
+    color: #E8E8E8;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    position: fixed;
 }
