@@ -1,7 +1,8 @@
+const key = require('../utils/apikeys')
 const call = require('request');
 
 const forecastDetails = (address,callback) => {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${address}&appid=4172b96b51e0dea32a62f7855a323a84&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${address}&appid=${key.apikey}&units=metric`;
     call({uri: url, json: true}, (error,response) => {
         if(error) {
             callback('Internet is not working', undefined);
