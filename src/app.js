@@ -24,7 +24,7 @@ app.get('', (req,res) => {
     res.render('index', {
         title: 'Weather',
         desc: 'Demo Weather Application',
-        created: 'copyright@Nischal Newar'
+        created: 'Created By: Nischal Newar'
     });
 });
 
@@ -33,14 +33,14 @@ app.get('/about', (req,res) => {
     res.render('about', {
         title: 'About',
         desc: 'Demo Weather Application',
-        created: 'copyright@Nischal Newar'
+        created: 'Created By: Nischal Newar'
     });
 })
 
 //help page error
 app.get('about/*',(req,res) => {
     res.render('404',{
-        errorMessage: 'Help Content Not Found'
+        errorMessage: 'Content Not Found'
     });
 })
 

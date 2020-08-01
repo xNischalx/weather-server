@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    font-family: 'montserrat', Helvetica, sans-serif;
+    height: 100vh;
+    background-image: url("/img/sunset.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Menu-Bar*/
+.topnav {
+    overflow: hidden;
+    background-color: #0F2B3A;
+}
+  
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+  
+.topnav a.active {
+    background-color:#2490B8;
+    color: white;
+}
+
+/*Head*/
+.head{
+      color: #ce6b4e;
+      text-align: center;
+}
+
+/*app-container*/
+* { box-sizing: border-box; }
+
+.app-container {
+    display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 5px 0;
+}
+  
+.app-column {
+    flex: 1;
+	margin: 2px;
+    padding: 10px;
+    color: rgb(209, 202, 208);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 980px) {
+    .app-container .app-column {
+        flex-basis: 50%;
+        font-size: 10px;
+        }
+}
+  
+@media screen and (max-width: 680px) {
+    .app-container .app-column {
+        flex-basis: 50%;
+        margin: 0 0 5px 0;
+        font-size: 10px;
+    }
+}
+
+.app-container a {
+    color: rgb(97, 173, 97);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.app-container h3{
+    color: rgb(97, 173, 97);
+}
+
+/*Footer*/
+.footer{
+    color: #ce6b4e;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+}

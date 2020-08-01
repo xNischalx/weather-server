@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/about.css">
         <title>Weather-Application</title>
     </head>
     <body>
         {{>header}}
-        {{desc}}
+        <div class="app-container">
+            <div class="app-column">
+                <h3><strong>About</strong></h3>
+                <p>I have created this application as part of my learning journey in Node JS.</p>
+                <p>This application will provide you the weather detail of a city. Please enter your desired city name.</p>
+                <p>You can access the project from <a href="https://github.com/xNischalx/weather-server" target="_blank">here</a></p>
+            </div>
+            <div class="app-column">
+                <h3><strong>Open Weather API</strong></h3>
+                <p>I have used the Open Weather API to extract all the weather information of a city.</p>
+                <p>
+                    The "OpenWeatherMap API Guide" helps you find useful information,<br>    
+                    links,documents to start using our weather API services smoothly.
+                </p>
+                <p>
+                    <strong>OpenWeatherMap</strong> is one of the leading digital weather information providers.
+                    They are a small IT company, established in 2014 by a group of engineers and experts in Big Data, 
+                    data processing, and satellite imagery processing.
+                </p>
+                <p>
+                    Their headquarters is in the UK, they have an office in the USA,
+                    and the development team in Latvia (EU).
+                </p>    
+                </p> 
+            </div>
+            <div class="app-column">
+                <h3><strong>Weather Icons</strong></h3>
+                <p>
+                    These icons were created by the NetGuru Team. They released these icons in a beautiful Adobe Illustrator file.<br>
+                </p> 
+                <p>
+                    This project simply breaks that AI file up into web friendly icons that can be used in your projects.<br>
+                </p>    
+                <p>
+                    You can find the Icons link <a href="https://dribbble.com/shots/2923788-Free-Weather-Icons" target="_blank">here</a><br> 
+                    Follow or hire them <a href="https://dribbble.com/netguru" target="_blank">here</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer">
+            {{>footer}}
+        </div>
     </body>
-    <footer>
-        {{>footer}}
-    </footer>
 </html>

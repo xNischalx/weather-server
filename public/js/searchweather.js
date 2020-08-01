@@ -22,7 +22,7 @@ weatherAddress.addEventListener('submit', (e) => {
             country.textContent = data.location;
             temperature.innerHTML = `${data.temperature} <span>ºC</span>`;
             forecast.textContent = data.forecast;
-            humidity.innerHTML = `<span>Humidity: </span>${data.humidity}<span>%</span>`;
+            humidity.innerHTML = `<span>Humidity: </span>${data.humidity} <span>%</span>`;
         }
     })
 })
